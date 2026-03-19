@@ -3,19 +3,22 @@
 ## 🚀 Repository Created
 **GitHub**: https://github.com/pate0304/ai-assistant-evolution
 
-## 📋 Roadmap Issues Created (14 Total)
+## 📋 Roadmap Issues Created (17 Total)
 
-### Phase 1: Foundation (4 issues)
+### Phase 1: Foundation (5 issues)
 - [x] **Issue #1**: Memory System Architecture (Critical)
 - [x] **Issue #2**: Persona Consistency Engine (Critical) 
 - [x] **Issue #3**: Enhanced Context Management (High)
 - [x] **Issue #4**: Response Quality Metrics (High)
+- [x] **Issue #17**: Multi-Agent LangGraph Architecture (Critical)
 
-### Phase 2: Intelligence (4 issues)
+### Phase 2: Intelligence (6 issues)
 - [x] **Issue #5**: RLHF Learning System (Critical)
 - [x] **Issue #6**: Multi-Modal Integration (High)
 - [x] **Issue #7**: Advanced Tool Orchestration (High)
 - [x] **Issue #8**: Emotional Intelligence Engine (Medium)
+- [x] **Issue #15**: Sandbox Execution Environment (Critical)
+- [x] **Issue #16**: Human-in-the-Loop Control System (Critical)
 
 ### Phase 3: Evolution (4 issues)
 - [x] **Issue #9**: Recursive Self-Improvement (Critical)
@@ -26,6 +29,13 @@
 ### Infrastructure (2 issues)
 - [x] **Issue #13**: Development Environment Setup (Critical)
 - [x] **Issue #14**: Safety & Governance Framework (Critical)
+
+## 🔄 **Open SWE Integration Complete**
+
+### Key Enhancements Added
+- **Issue #15**: Sandbox execution with Docker isolation (inspired by Open SWE + Daytona)
+- **Issue #16**: Human-in-the-loop control (plan approval, double texting, interruptions)
+- **Issue #17**: LangGraph multi-agent architecture (Manager → Planner → Executor → Reviewer)
 
 ## 🏗️ Development Infrastructure Ready
 

@@ -4,13 +4,17 @@ An open-source project to transform static AI assistants into continuously evolv
 
 ## Philosophy
 
-Inspired by async coding agent frameworks, this project treats AI assistant development as a continuous evolution process rather than static deployment. We believe in:
+Inspired by [Open SWE](https://blog.langchain.com/introducing-open-swe-an-open-source-asynchronous-coding-agent/) and async coding agent frameworks, this project treats AI assistant development as a continuous evolution process rather than static deployment. We believe in:
 
+- **Asynchronous Cloud Architecture**: Long-running, autonomous agents that operate independently
+- **Deep Tool Integration**: Direct integration with user environments and workflows
+- **Multi-Agent Orchestration**: Specialized agents working together (Manager → Planner → Executor → Reviewer)
+- **Human-in-the-Loop Control**: Real-time oversight with interruption and guidance capabilities
+- **Secure Sandbox Execution**: Isolated environments for safe autonomous operation
 - **Iterative Enhancement**: Small, testable improvements over time
 - **Open Architecture**: Modular components that can be extended and customized
 - **Community-Driven**: Crowdsourced improvements and shared learnings
 - **Safety-First**: Robust guardrails for self-modification capabilities
-- **Practical Focus**: Real-world utility over academic novelty
 
 ## Vision
 
@@ -24,9 +28,24 @@ Transform AI assistants from "one-size-fits-all" to personalized, learning compa
 ## Architecture Overview
 
 ```
+                    ┌─────────────────┐
+                    │ Manager Agent   │
+                    │ • Entry Point   │
+                    │ • Task Routing  │
+                    │ • User Control  │
+                    └─────────┬───────┘
+                              │
+              ┌───────────────┼───────────────┐
+              │               │               │
+    ┌─────────▼───────┐ ┌─────▼─────┐ ┌───────▼─────┐
+    │ Planner Agent   │ │ Executor  │ │ Reviewer    │
+    │ • Task Analysis │ │ Agent     │ │ Agent       │
+    │ • Decomposition │ │ • Execute │ │ • Validate  │
+    │ • Strategy      │ │ • Monitor │ │ • Correct   │
+    └─────────────────┘ └───────────┘ └─────────────┘
+
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Memory Core   │    │  Persona Engine │    │ Learning System │
-│                 │    │                 │    │                 │
 │ • Working Mem   │◄──►│ • Identity      │◄──►│ • RLHF Loop     │
 │ • Episodic      │    │ • Consistency   │    │ • Pattern Recog │
 │ • Semantic      │    │ • Adaptation    │    │ • Meta Learning │
@@ -35,11 +54,10 @@ Transform AI assistants from "one-size-fits-all" to personalized, learning compa
          └───────────────────────┼───────────────────────┘
                                  │
                     ┌─────────────────┐
-                    │ Tool Orchestra  │
-                    │                 │
-                    │ • Workflow Mgmt │
-                    │ • Multi-Step    │
-                    │ • Error Recovery│
+                    │ Sandbox Engine  │
+                    │ • Secure Exec   │
+                    │ • Isolation     │
+                    │ • Monitoring    │
                     └─────────────────┘
 ```
 
